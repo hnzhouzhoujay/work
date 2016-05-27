@@ -31,6 +31,7 @@ import org.quartz.impl.StdSchedulerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 /**
  * Used to test/show the clustering features of JDBCJobStore (JobStoreTX or JobStoreCMT).
  * <p>
@@ -63,16 +64,15 @@ import org.slf4j.LoggerFactory;
  */
 public class ClusterExample {
 
-  private static Logger _log = LoggerFactory.getLogger(ClusterExample.class);
+  private static Logger       _log  = LoggerFactory.getLogger(SimpleRecoveryJob.class);
 
   public void run(boolean inClearJobs, boolean inScheduleJobs) throws Exception {
 
     // First we must get a reference to a scheduler
-    SchedulerFactory sf = new StdSchedulerFactory();
-    Scheduler sched = sf.getScheduler();
+	  Scheduler sched=StdSchedulerFactory.getDefaultScheduler();
 
     if (inClearJobs) {
-      _log.warn("***** Deleting existing jobs/triggers *****");
+      _log.info("***** Deleting existing jobs/triggers *****");
       sched.clear();
     }
 
