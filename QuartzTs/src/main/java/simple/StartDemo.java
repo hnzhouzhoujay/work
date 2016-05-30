@@ -26,7 +26,7 @@ public class StartDemo {
 				.usingJobData("name", "简单工作")
 				.build();
 			
-			JobDetail job1=JobBuilder.newJob(SimpleJob1.class)
+			JobDetail job1=JobBuilder.newJob(SimpleJob.class)
 					.withIdentity("complexJob", "complexJob")
 					.usingJobData("name", "复杂工作")
 					.build();
@@ -54,12 +54,12 @@ public class StartDemo {
 			scheduler.getListenerManager().addJobListener(new SimpleJobListener(),KeyMatcher.keyEquals(new JobKey("complexJob", "complexJob")));
 			scheduler.getListenerManager().addTriggerListener(new SimpleTrigger("cron的"), KeyMatcher.keyEquals(new TriggerKey("conTrigger", "conTrigger")));
 			scheduler.start();
-			try {
+			/*try {
 				
 				TimeUnit.MINUTES.sleep(10);
 				scheduler.shutdown();
 			} catch (Exception e) {
-			}
+			}*/
 			
 		} catch (SchedulerException e) {
 			e.printStackTrace();
