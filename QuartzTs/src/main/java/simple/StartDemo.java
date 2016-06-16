@@ -46,13 +46,13 @@ public class StartDemo {
 					.build();
 		
 			scheduler.scheduleJob(job, trigger);
-			scheduler.scheduleJob(job1, conTrigger);
+//			scheduler.scheduleJob(job1, conTrigger);
 			
 			scheduler.getListenerManager().addJobListener(new SimpleJobListener(),KeyMatcher.keyEquals(new JobKey("simpleJob", "simpleJob")));
 			scheduler.getListenerManager().addTriggerListener(new SimpleTrigger("简单的"), KeyMatcher.keyEquals(new TriggerKey("simpleTrigger", "simpleTrigger")));
 			
-			scheduler.getListenerManager().addJobListener(new SimpleJobListener(),KeyMatcher.keyEquals(new JobKey("complexJob", "complexJob")));
-			scheduler.getListenerManager().addTriggerListener(new SimpleTrigger("cron的"), KeyMatcher.keyEquals(new TriggerKey("conTrigger", "conTrigger")));
+//			scheduler.getListenerManager().addJobListener(new SimpleJobListener(),KeyMatcher.keyEquals(new JobKey("complexJob", "complexJob")));
+//			scheduler.getListenerManager().addTriggerListener(new SimpleTrigger("cron的"), KeyMatcher.keyEquals(new TriggerKey("conTrigger", "conTrigger")));
 			scheduler.start();
 			/*try {
 				

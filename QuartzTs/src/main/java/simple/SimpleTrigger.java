@@ -30,6 +30,7 @@ public class SimpleTrigger implements TriggerListener{
 	@Override
 	public boolean vetoJobExecution(Trigger trigger, JobExecutionContext context) {
 		// TODO Auto-generated method stub
+		System.out.println("vetoed");
 		return false;
 	}
 
