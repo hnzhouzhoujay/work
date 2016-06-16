@@ -7,7 +7,7 @@ import elasticsearch.util.HttpClientUtils;
 
 public class ESearch {
 	public static void main(String[] args) {
-		System.out.println(HttpClientUtils.httpGet("http://10.10.10.179:9200/megacorp/employee/_search"));
+//		System.out.println(HttpClientUtils.httpGet("http://10.10.10.179:9200/megacorp/employee/_search"));
 		System.out.println(HttpClientUtils.httpGet("http://10.10.10.179:9200/_cluster/health"));
 		ESsearchService service = new ESsearchService();
 		MemberInfo memberInfo = new MemberInfo (4531,"Œ‚ÃÏ",1,
