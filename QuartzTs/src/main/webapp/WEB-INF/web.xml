@@ -29,9 +29,36 @@
         </init-param>
 
     </servlet>
+    
+    <servlet>
+        <servlet-name>curltest</servlet-name>
+        
+        <servlet-class>
+            com.caucho.hessian.server.HessianServlet
+        </servlet-class>
+        
+        <init-param>            
+            <param-name>home-class</param-name>            
+            <param-value>
+                <!-- 服务实现类 -->
+                service.impl.CurlServiceImpl
+            </param-value>
+        </init-param>
+
+        <init-param>            
+            <param-name>home-api</param-name>
+            <!-- 服务接口 -->
+            <param-value>service.CurlService</param-value>
+        </init-param>
+
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>hessian-service</servlet-name>
         <url-pattern>/hessian</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>curltest</servlet-name>
+        <url-pattern>/curltest/*</url-pattern>
     </servlet-mapping>
 </web-app> 

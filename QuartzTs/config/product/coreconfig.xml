@@ -1,0 +1,38 @@
+<all-config>
+	<config id="SystemOut">
+		<parameter name="enable" value="0"/>
+	</config>
+	<config id="DBtool">
+		<parameter name="enableDebugMsg" value="0"/>
+		<parameter name="DBPoolType" value="proxool"/>
+	</config>
+	<config id="OnlineManager">
+		<parameter name="enableDebugMsg" value="0"/>
+	</config>
+	<config id="UserClient">
+		
+        <parameter name="serverURL0" value="http://10.10.9.110:18123/usernew/UserService"/>
+        <parameter name="serverURL1" value="http://10.10.9.110:18123/usernew/UserService"/>
+        <parameter name="serverURL2" value="http://10.10.9.110:18123/usernew/UserService"/>
+        <parameter name="serverURL3" value="http://10.10.9.110:18123/usernew/UserService"/>
+        <parameter name="serverURL4" value="http://10.10.9.110:18123/usernew/UserService"/>
+        <parameter name="serverURL5" value="http://10.10.9.110:18123/usernew/UserService"/>
+        <parameter name="serverURL6" value="http://10.10.9.110:18123/usernew/UserService"/>
+        <parameter name="serverURL7" value="http://10.10.9.110:18123/usernew/UserService"/>
+
+		<parameter name="connectTimeout" value="1000"/> <!-- 单位：毫秒 -->
+		<parameter name="timeout" value="1000"/> <!-- 单位：毫秒 -->
+		<parameter name="retryTimes" value="3"/> <!-- 单位：次数 -->
+		<parameter name="secretId" value="2KMlMO7ab3Dv1LO"/>
+		<parameter name="secretKey" value="qNaDmMDAvBzf"/>
+		<!--<parameter name="logSwitch" value="1"/>-->
+	</config>
+	<config id="bsm">
+		<parameter name="PhoneService" value="http://10.10.9.110:18123/usernew/PhoneService"/>
+		<parameter name="timeout" value="50000"/>
+	</config>
+	<config id="blackList">
+		<parameter name="BlackListService" value="http://10.10.9.110:18123/usernew/BlackListService"/>
+		<parameter name="timeout" value="20000"/>
+	</config>
+</all-config>
