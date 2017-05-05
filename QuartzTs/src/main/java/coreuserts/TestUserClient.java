@@ -1,13 +1,17 @@
 package coreuserts;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.nio.charset.Charset;
 import java.util.List;
 
 import com.coola.core.user.share.UserClient;
@@ -22,7 +26,7 @@ public class TestUserClient {
 			98422454,98422453,98422432,98422400,98422380,98422303,98422262,98422222,98422221,98422216,98422180,98422149,98422136,98422132,98422050,98422002,98421999,98421924,98421904,98421867,98421863,98421860,98421804,98421771,98421726,98421703,98421677,98421653,98421579,98421508,98421500,98421433,98421365,98421364,98421363,98421356,98421338,98421307,98421297,98421209,98421127,98421096,98421048,98421013,98420860,98420834,98420833,98420811,98420743,98420651,98420626,98420597,98420582,98420568,98420555,98420549,98420548,98420524,98420479,98420401,98420399,98420390,98420295,98420287,98420277,98420262,98420254,98420247,98420232,98420209,98420127,98420089,98420084,98420057,98420047,98420046,98419957,98419940,98419916,98419870,98419854,98419824,98419810,98419796,98419778,98419773,98419770,98419766,98419760,98419759,98419679,98419669,98419649,98419620,98419609,98419598,98419588,98419581,98419500,98419347
 	};
 	public static void main(String[] args) {
-		try {
+/*		try {
 			UserClient client = new UserClient();
 //			List<UserInfo2> info2 = client.getList(memberIds, UserInfo2.class);
 //			System.out.println(info2.size());
@@ -36,7 +40,17 @@ public class TestUserClient {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
+		System.out.println(read("menu.txt"));
+		/*try {
+			UserClient client = new UserClient();
+			System.out.println(client.getPhoneClient().encodePhone("13037396062"));
+			System.out.println(client.getPhoneClient().decodePhone("310C3DF7C586223AF1C16305CE57F5B9"));
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 	}
 	
 	
@@ -67,7 +81,7 @@ public class TestUserClient {
 	
 	public static void writeObjects(Object obj){
 	
-		try {
+/*		try {
 			FileOutputStream fos = new FileOutputStream("testWriteObject.txt");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(obj);
@@ -75,8 +89,25 @@ public class TestUserClient {
 			fos.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-		} 
+		} */
+		System.out.println(read("menu.txt"));
 		
+	}
+	
+	private static String read(String name){
+		InputStream is = TestUserClient.class.getClassLoader().getResourceAsStream(name);
+		BufferedReader br = new BufferedReader(new InputStreamReader(is,Charset.forName("utf-8")));
+		StringBuilder data = new StringBuilder();
+		String line = null;
+		try {
+			while((line=br.readLine())!=null){
+				data.append(line); 
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return data.toString();
 	}
 
 }

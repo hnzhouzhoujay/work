@@ -1,0 +1,64 @@
+{
+    "button": [
+        {
+            "name": "强将邀约", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "社会招聘", 
+                    "url": "http://hrwx.zhenai.com/phone/queryPosition?scope=world"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "社招活动", 
+                    "url": "http://hrwx.zhenai.com/phone/activity"
+                }
+            ]
+        },
+		 {
+            "name": "人在珍爱", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "公司介绍", 
+                    "url": "http://hrwx.zhenai.com/phone/zhenai"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "珍爱那些事", 
+                    "url": "http://hrwx.zhenai.com/phone/zhenaimatter"
+                }
+            ]
+        },
+		 {
+            "name": "新兵招募", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "校招进行时", 
+                    "url": "http://hrwx.zhenai.com/phone/schoolTense"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "校园招聘", 
+                    "url": "http://hrwx.zhenai.com/phone/queryPosition?scope=school"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "校招回顾", 
+                    "url": "http://mp.weixin.qq.com/s/bVE2Qdw5l7PYGDnrWHTjYw"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "珍爱小兵成长记", 
+                    "url": "http://hrwx.zhenai.com/phone/schoolbatman"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "宣讲城市征集", 
+                    "url": "http://hrwx.zhenai.com/phone/viewSchoolcount"
+                }
+            ]
+        }
+    ]
+}
