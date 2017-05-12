@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d %c [%t %level] - %msg%n"/>
+    </Console>
+  <File name="appFile" fileName="logs/app.log">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      </PatternLayout>
+   </File>
+  </Appenders>
+  <Loggers>
+   <logger name="flogger" level="debug" additivity="false">
+        <AppenderRef ref="appFile"/>
+   </logger>
+   <logger name="org.springframework" level="debug"></logger>
+   <logger name="com.baidu.disconf" level="debug"></logger>
+   <logger name="org.apache.zookeeper" level="debug"></logger>
+    <Root level="debug">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
